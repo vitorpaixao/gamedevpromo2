@@ -34,8 +34,15 @@ export class UsersService {
     return this.usersRepository.save(user);
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  update(id: number, UpdateUserDto: UpdateUserDto) {
+    // return `This action updates a #${id} user`;
+
+    // const user = new User();
+    // user.name = updateUserDto.email;
+    // user.email = updateUserDto.email;
+    // user.score = updateUserDto.score;
+
+    return this.usersRepository.update(id, {score: 1000});
   }
 
   // findAll() {
